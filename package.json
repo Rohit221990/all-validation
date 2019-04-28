@@ -1,6 +1,6 @@
 {
   "name": "@rohit22/all-validate",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Validate all the input text with ease",
   "main": "src/validation/index.js",
   "scripts": {

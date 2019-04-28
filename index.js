@@ -1,6 +1,8 @@
 import {Validation} from './src/validation';
+import {Search} from './src/search';
 
-export default {
+
+module.exports = {
   Validation : Validation,
   Search: Search
 }
