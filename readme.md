@@ -1,4 +1,5 @@
 ### Validations
+### GitHub Repository https://github.com/Rohit221990/all-validation.git
 
 ## Email Validations
 ```
@@ -90,7 +91,7 @@ usPostalCode('00000-0000', true)
 ```
 
 
-## North American Phone number valudation
+## North American Phone number validation
 
 ```
 var response  = naPhoneNumberValidate(value, required)
