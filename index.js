@@ -1,5 +1,6 @@
 import {Validation} from './src/validation';
 
 export default {
-  Validation : Validation;
+  Validation : Validation,
+  Search: Search
 }
