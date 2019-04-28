@@ -91,13 +91,16 @@ usPostalCode('00000-0000', true)
 ```
 
 
-## North American Phone number validation
+## validate area Phone number validation
 
 ```
-var response  = naPhoneNumberValidate(value, required)
+Any area validation. Example: 'US','IND','IRAN','ITALI','SA','INDONESIA','UK','Other'
+
+
+var response  = phoneNumberValidate(value, area, required)
 
 Example:
-naPhoneNumberValidate('value', true)
----return true;
+phoneNumberValidate('phone number',area, true)
+---return bool
 
 ```
