@@ -1,5 +1,5 @@
 var _ = require('lodash');
-import commonObj from './common'
+import {commonObj, postalObj, errorPostalObj, objIP} from './common'
 
 export class Validation {
   constructor() {
@@ -66,29 +66,16 @@ export class Validation {
     }
   }
 
-  pinCodeValidate(value, required){
+  pinCodeValidate(value, place, required){
     if(required || required == undefined){
-      var validatePin = /^(\d{6})$/
-      if(value.match(validatePin)){
+      var validatePin = postalObj[place]
+      if(value.test(validatePin)){
         return true;
       }else{
         return false;
       }
     }else{
-      return "Pin Code is required";
-    }
-  }
-
-  usPostalCode(value, required){
-    if(required || required == undefined){
-      var reg = /(^\d{5}$)|(^\d{5}-\d{4}$)/
-      if(value.match(reg)){
-        return true;
-      }else{
-        return false;
-      }
-    }else{
-      return "Postal Code is required"
+      return errorPostalObj[place];
     }
   }
 
@@ -104,5 +91,46 @@ export class Validation {
       return "Phone Number is Required";
     }
   }
+
+  validateIP(value, type, required){
+    if(required || required == undefined){
+      var reg = objIP[type];
+      if(value.test(reg)){
+        return true;
+      } else{
+        return false
+      }
+    }else{
+      return type + "is Required";
+    }
+  }
+
+  validateDomain(value, required){
+    if(required || required == undefined){
+      let reg = /^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$/
+      if(value.test(reg)){
+        return true;
+      }else{
+        return false;
+      }
+    }
+    else{
+      return "Domain field is required";
+    }
+  }
+
+  validatePrice(value, required){
+    if(required, required == undefined){
+      let reg = /\d+(\.\d{2})?/
+      if(value.test(reg)){
+        return true;
+      }else{
+        return false;
+      }
+    }else{
+      return "Price is Required";
+    }
+  }
+
 
 }

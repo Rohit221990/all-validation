@@ -70,24 +70,14 @@ panCardValidate('value', true)
 
 ```
 
-## Indian pin code Validations
+## pin code Validations
 ```
 
-var response = pinCodeValidate(value, required)
+var response = pinCodeValidate(value, place, required)
 
 Example:
-pinCodeValidate('000000', true)
+pinCodeValidate('000000','IND', true)
  ------return bool
-```
-
-## US postal code Validation
-```
-var response = usPostalCode(value, required)
-
-Example:
-usPostalCode('00000-0000', true)
-----return bool
-
 ```
 
 
@@ -104,3 +94,8 @@ phoneNumberValidate('phone number',area, true)
 ---return bool
 
 ```
+## Many validation functions are available:
+```
+validateIP(value, type, required) // Example: validateIP('192.168.34.56', 'IPv4', true) OR validateIP('IPv6 value', 'IPv6', true)
+validateDomain(value, required) // Example validateDomain('www.google.com', true) OR validateDomain('www.google.com', false)
+validatePrice(value, required) // Example validatePrice('23:00', true) OR validatePrice('33:00', false)
