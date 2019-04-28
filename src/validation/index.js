@@ -1,4 +1,5 @@
 var _ = require('lodash');
+import commonObj from './common'
 
 export class Validation {
   constructor() {
@@ -91,10 +92,10 @@ export class Validation {
     }
   }
 
-  naPhoneNumberValidate(value, required){
+  phoneNumberValidate(value, country, required){
     if(required || required == undefined){
-      var reg = /^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
-      if(value.match(req)){
+      var reg = commonObj['country'];
+      if(reg.test(value)){
         return true;
       }else{
         return false;
