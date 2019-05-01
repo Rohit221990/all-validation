@@ -1,4 +1,4 @@
-### Validations
+### Password validation, Email validation, phone Number validation, Pin validation, IP validation, PAN validation, Password validation, Passport validation
 ### GitHub Repository https://github.com/Rohit221990/all-validation.git
 
 ## Email Validations
@@ -41,6 +41,16 @@ emailValidate('abc@abc.abc', false) // If field is not required
 ---- return bool
 
  patterns details: http://regexlib.com/Search.aspx?k=Password&AspxAutoDetectCookieSupport=1
+
+ Pattern Type:
+//Validate with one character, one number and one special character(if there)
+^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z_@./#&+-]{6,8}$
+
+// Validate with one Character, one Capital character, one special character and one number
+^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#&^%$@!_*-]).{6,8}$
+
+//Validate with character, number and no special character
+(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,8})$
 
 ```
 ## Passport validation with given maxlength
