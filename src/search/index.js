@@ -1,4 +1,5 @@
 const axios = require('axios');
+import byPinCodeIndia from './api/byPinCodeIndia';
 
 export class Search {
   constructor() {
@@ -21,4 +22,5 @@ export class Search {
       })
     });
   }
+
 }
