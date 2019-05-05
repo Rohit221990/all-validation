@@ -6,18 +6,19 @@ export class Search {
 
   //Get Post Office(s) details search by Postal PIN Code
   byPinCodeIndia(value){
-    axios.get('http://postalpincode.in/api/pincode'+value).then((res, error){
-      return res;
-    }).catch((err) => {
-      return err;
-    })
+    return new Promise(function(resolve, reject) {
+      byPinCodeIndia((res) => {
+        return res;
+      })
+    });
   }
 
+  //Get Post Office(s) details search by Postal PIN Code
   byPostOfficeBrancNameIndia(value){
-    axios.get('http://postalpincode.in/api/postoffice'+value).then((res, error){
-      return res;
-    }).catch((err) => {
-      return err;
-    })
+    return new Promise(function(resolve, reject) {
+      byPostOfficeBrancNameIndia((res) => {
+        return res;
+      })
+    });
   }
 }
